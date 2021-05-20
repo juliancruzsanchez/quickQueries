@@ -64,3 +64,11 @@ window.requestAsync = function(url, method) {
     request.send();
   })
 }
+
+Array.prototype.delete = function (key) {
+  if (this[key]) {
+    delete this[key]
+  } else {
+    throw new Error("Key not found")
+  }
+}
